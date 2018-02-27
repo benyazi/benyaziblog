@@ -21,8 +21,26 @@
                             Tags: <span class="badge badge-light ml-1" @click="showTag(tag)" v-for="tag in post.tags">{{tag.name}}</span>
                         </div>
                         <div class="col-4 text-right">
-                            <a :href="post.url" class="btn btn-sm">Read More</a>
+                            <button class="btn btn-sm" @click="showPost(post)">Read More</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal b_showingPost" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" v-if="showingPost !== null">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{showingPost.title}}</h5>
+                        <button type="button" class="close" aria-label="Close" @click="hidePost()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <template v-if="showingPost.type === 'markdown'">
+                            <vue-markdown :source="showingPost.intro"></vue-markdown>
+                            <vue-markdown :source="showingPost.content"></vue-markdown>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -31,9 +49,12 @@
 </template>
 
 <script>
+    import VueMarkdown from 'vue-markdown';
     export default {
+        components: {'vue-markdown': VueMarkdown},
         data() {
             return {
+                'showingPost': null,
                 'posts': [],
                 'page': 1,
                 'perPage': 10,
@@ -43,6 +64,14 @@
         methods: {
             showTag(tag) {
 
+            },
+            showPost(post) {
+                this.showingPost = post;
+                $('.b_showingPost').modal('show');
+            },
+            hidePost() {
+                $('.b_showingPost').modal('hide');
+                this.showingPost = null;
             },
             getPosts() {
                 let _this = this;
