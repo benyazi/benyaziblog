@@ -70,10 +70,10 @@
                                 <h2 class="mt-0">Sergey Klabukov</h2>
                                 <h5 class="mt-2">Middle PHP-developer</h5>
                                 <div class="mt-2">
-                                    <strong>Skills: </strong> PHP5.3 - PHP7.1, Laravel, Yii, Symfony, Phalcon Framework, JavaScript, Vue.js, jQuery, Go, Lua, C#, Unity3D. Defold Game Engine.
+                                    <strong>Skills: </strong> PHP5.3 - PHP7.*, Laravel, Yii, Symfony, Phalcon Framework, JavaScript, Vue.js, jQuery, Go, Lua, C#, Unity3D. Defold Game Engine.
                                 </div>
                                 <div class="mt-2">
-                                    <strong>Links: </strong> <a href="https://github.com/benyazi">Github</a>, <a href="https://www.linkedin.com/in/sergeyklabukov/">LinkedIn</a>, <a href="mailto:yo@benyazi.ru">yo@benyazi.ru</a>
+                                    <strong>Links: </strong> <a href="https://github.com/benyazi">Github</a>, <a href="https://twitter.com/ben_yazi">Twitter</a>, <a href="https://www.linkedin.com/in/sergeyklabukov/">LinkedIn</a>, <a href="mailto:yo@benyazi.ru">yo@benyazi.ru</a>
                                 </div>
                             </div>
                         </div>
