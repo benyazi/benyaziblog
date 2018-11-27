@@ -11,7 +11,7 @@
                            class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{$careerItem->company_name}}</h5>
-                                <small>{{$careerItem->start_work->format("m/Y")}} - {{$careerItem->end_work->format("m/Y")}}</small>
+                                <small>{{$careerItem->start_work->format("m/Y")}} - @if($careerItem->end_work){{$careerItem->end_work->format("m/Y")}}@else current @endif</small>
                             </div>
                             <p class="mb-1">{{$careerItem->experience}}</p>
                             <small>Location: {{$careerItem->company_location}}</small>
